@@ -30,7 +30,7 @@ BEGIN
  declare continue handler for not found set m_notfound = 1;
 
  delete from katn3_categories
- where id != 1;
+ where id != 1 and extension = "com_content";
 
  delete from katn3_content;
 

@@ -59,6 +59,10 @@ BEGIN
     leave m_loop_menu;
    end if;
 
+   if m_link = "index.php?option=com_content&view=frontpage" then
+    set m_link = "index.php?option=com_content&view=featured";
+   end if;
+
    insert into katn3_menu
    set menutype = m_menutype, title = m_name, alias = m_alias, path = "", link = m_link, `type` = m_type, published = m_published, parent_id = 1, `level` = 1,
        component_id = m_componentid, access = 1, img = "", params = "", lft = 0, rgt = 1, home = m_home, `language` = "*";

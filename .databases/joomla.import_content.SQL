@@ -36,7 +36,7 @@ BEGIN
 
  delete from katn3_content_frontpage;
 
- create temporary table if not exists _sc2c
+ create temporary table if not exists _content
  (
   sectionid int unsigned not null,
   catid int unsigned not null,
@@ -44,7 +44,7 @@ BEGIN
   primary key (sectionid, catid)
  ) engine = memory;
 
- truncate _sc2c;
+ truncate _content;
 
  set m_next = ifnull((
   select greatest(max(lft), max(rgt))
@@ -61,7 +61,7 @@ BEGIN
  set id = 2, parent_id = 1, lft = m_next, rgt = m_next + 1, `level` = 1, path = "trash", extension = "com_content", title = "TRASH",
      alias = "trash", published = 1, access = 1, params = "{}", metadata = "{}", created_user_id = 986, `language` = "*";
 
- insert into _sc2c
+ insert into _content
  set sectionid = 0, catid = 0, id = 2;
 
  set m_next = m_next + 1;
@@ -89,7 +89,7 @@ BEGIN
 
   set m_id_section = last_insert_id();
 
-  insert into _sc2c
+  insert into _content
   set sectionid = m_section_id, catid = m_categories_id, id = m_id_section;
 
   set m_level = m_level + 1;
@@ -115,7 +115,7 @@ BEGIN
 
    set m_id_categories = last_insert_id();
 
-   insert into _sc2c
+   insert into _content
    set sectionid = m_section_id, catid = m_categories_id, id = m_id_categories;
 
    set m_next = m_next + 1;
@@ -151,7 +151,7 @@ BEGIN
 
   set m_id_categories = ifnull((
    select id
-   from _sc2c
+   from _content
    where sectionid = m_section_id and catid = m_categories_id
   ), 0);
 
@@ -171,8 +171,6 @@ BEGIN
 
  end loop m_loop_content;
  close m_cursor_content;
-
- drop temporary table _sc2c;
 
 END $$
 

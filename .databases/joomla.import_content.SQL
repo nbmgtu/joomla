@@ -59,7 +59,7 @@ BEGIN
 
  insert into katn3_categories
  set id = 2, parent_id = 1, lft = m_next, rgt = m_next + 1, `level` = 1, path = "trash", extension = "com_content", title = "TRASH",
-     alias = "trash", published = 1, access = 1, params = "{}", metadata = "{}", created_user_id = 986, `language` = "*";
+     alias = "trash", published = 1, access = 1, params = "{}", metadata = "{}", created_user_id = 986, `language` = "*", description = "";
 
  insert into _content
  set sectionid = 0, catid = 0, id = 2;

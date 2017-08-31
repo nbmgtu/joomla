@@ -1,0 +1,16 @@
+TABLE.delivery {
+border: 1px solid #D4CCAA;
+font-size: 13px;
+}
+
+TABLE.delivery TD, SELECT {
+border: 1px solid #D4CCAA;
+}
+
+P.readme {
+border-bottom: 1px solid #D4CCAA;
+border-top: 1px solid #D4CCAA;
+background-color: #F2F0E6;
+margin: 10px;
+padding: 10px;
+}

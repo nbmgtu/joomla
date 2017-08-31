@@ -1,0 +1,17 @@
+TABLE.issues {
+ width: 100%;
+ border-bottom: solid 2px #F0DC7E;
+ border-left: solid 2px #F0DC7E;
+}
+
+TABLE.issues TH {
+ background-color: #F3F1E7;
+}
+
+P.caption {
+ text-align: left;
+ border-top: solid 2px #F0DC7E;
+ border-bottom: solid 2px #F0DC7E;
+ background-color: #F3F1E7;
+ padding: 5px;
+}

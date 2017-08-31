@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Image Preview</name>
+	<author>Starodub Igor</author>
+	<creationDate>Mart, 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<authorUrl />
+	<version>1.0</version>
+	<description>DESC_IMAGEPREVIEW</description>
+
+	<files>
+		<filename plugin="imagepreview">imagepreview.php</filename>
+	</files>
+
+	<languages>
+		<language tag="ru-RU">ru-RU.plg_content_imagepreview.ini</language>
+	</languages>
+
+	<params>
+		<param name="engine" type="list" default="highslide" label="ENGINE" description="DESC_ENGINE">
+			<option value="highslide">HIGHSLIDE</option>
+		</param>
+		<param name="slideshow_pause" type="text" default="5000" label="SLIDESHOW_PAUSE" description="DESC_SLIDESHOW_PAUSE" />
+	</params>
+
+	</install>

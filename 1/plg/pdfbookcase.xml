@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - pdfbookcase</name>
+	<author>Starodub Igor</author>
+	<creationDate>May, 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<authorUrl />
+	<version>1.0</version>
+	<description>DESC_PDFBOOKCASE</description>
+
+	<files>
+		<filename plugin="pdfbookcase">pdfbookcase.php</filename>
+	</files>
+
+	<languages>
+		<language tag="ru-RU">ru-RU.plg_content_pdfbookcase.ini</language>
+	</languages>
+
+	<params />
+
+	</install>

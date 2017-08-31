@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>mod_fadeimages</name>
+	<author>Starodub Igor</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<description>MOD_FADEIMAGES_XML_DESCRIPTION</description>
+	<files>
+		<filename>mod_fadeimages.xml</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename module="mod_fadeimages">mod_fadeimages.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>js/fadeimages.js</filename>
+	</files>
+	<languages>
+		<language tag="ru-RU">ru-RU.mod_fadeimages.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_FADEIMAGES" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="folder"
+					type="text"
+					label="MOD_FADEIMAGES_FIELD_FOLDER_LABEL"
+					description="MOD_FADEIMAGES_FIELD_FOLDER_DESC"
+					default="/"
+				/>
+
+				<field
+					name="sleep"
+					type="text"
+					label="MOD_FADEIMAGES_FIELD_SLEEP_LABEL"
+					description="MOD_FADEIMAGES_SLEEP_DESC"
+					default="7000"
+					class="validate-numeric"
+					filter="integer"
+				/>
+
+				<field
+					name="step"
+					type="text"
+					label="MOD_FADEIMAGES_FIELD_STEP_LABEL"
+					description="MOD_FADEIMAGES_STEP_DESC"
+					default="2"
+					class="validate-numeric"
+					filter="integer"
+				/>
+
+				<field
+					name="interval"
+					type="text"
+					label="MOD_FADEIMAGES_FIELD_INTERVAL_LABEL"
+					description="MOD_FADEIMAGES_INTERVAL_DESC"
+					default="35"
+					class="validate-numeric"
+					filter="integer"
+				/>
+
+			</fieldset>
+
+			<fieldset name="advanced" />
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+ <name>nbmgtu</name>
+ <creationDate>2017-09-01</creationDate>
+ <author>Starodub Igor</author>
+ <authorEmail>starodub.xxx@gmail.com</authorEmail>
+ <authorUrl></authorUrl>
+ <copyright>© 2074 Starodub Igor. All Rights Reserved.</copyright>
+ <license>GNU General Public License version 2 or later</license>
+ <version>1.0.0</version>
+ <description>TPL_NBMGTU_XML_DESCRIPTION</description>
+
+ <files>
+  <folder>css</folder>
+  <folder>images</folder>
+  <folder>js</folder>
+  <folder>language</folder>
+  <filename>component.php</filename>
+  <filename>error.php</filename>
+  <filename>favicon.ico</filename>
+  <filename>index.php</filename>
+  <filename>template_preview.png</filename>
+  <filename>template_thumbnail.png</filename>
+  <filename>templateDetails.xml</filename>
+ </files>
+
+ <positions>
+  <position>mainmenu</position>
+  <position>fadeimages</position>
+  <position>left</position>
+  <position>right</position>
+ </positions>
+
+ <languages folder="language">
+  <language tag="en-GB">en-GB/en-GB.tpl_nbmgtu.ini</language>
+  <language tag="en-GB">en-GB/en-GB.tpl_nbmgtu.sys.ini</language>
+ </languages>
+</extension>

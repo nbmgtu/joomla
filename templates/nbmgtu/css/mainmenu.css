@@ -1,0 +1,62 @@
+.navigation
+{
+ background: rgb(85, 85, 85);
+ border-bottom: 0;
+ padding: 8px 6px 0px 6px
+}
+
+.navigation .menu
+{
+ margin: 0;
+ padding: 0;
+}
+
+.navigation .menu li
+{
+ display: inline-block;
+ margin: 0px 3px 0px 3px;
+ padding: 6px 20px 10px 20px;
+ list-style-position: inside;
+ text-transform: uppercase;
+ font: 14px 'Oswald', sans-serif;
+
+ background: linear-gradient(0deg, rgb(51, 51, 51), rgb(120, 120, 120));
+
+ border-radius: 6px 6px 0px 0px;
+ -webkit-border-radius: 6px 6px 0px 0px;
+ -moz-border-radius: 6px 6px 0px 0px;
+}
+
+.navigation .menu li.current
+{
+ background: linear-gradient(0deg, #c09e26, #eedfaa);
+
+ border-radius: 6px 6px 0px 0px;
+ -webkit-border-radius: 6px 6px 0px 0px;
+ -moz-border-radius: 6px 6px 0px 0px;
+}
+
+.navigation .menu a
+{
+ color: #b2b2b2;
+ text-decoration: none;
+}
+
+.navigation .menu li.current a
+{
+ color: #000;
+}
+
+.navigation .menu li:hover
+{
+ background: linear-gradient(0deg, #c09e26, #eedfaa);
+
+ border-radius: 6px 6px 0px 0px;
+ -webkit-border-radius: 6px 6px 0px 0px;
+ -moz-border-radius: 6px 6px 0px 0px;
+}
+
+.navigation .menu li:hover a
+{
+ color: #000;
+}

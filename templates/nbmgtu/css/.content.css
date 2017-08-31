@@ -1,0 +1,131 @@
+.slider {
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+}
+
+.slider .content {
+    padding: 30px 40px;
+    height: 220px;
+    background: #e2e2e2;
+}
+
+.slider .title {
+    color: #5a5a5a;
+    font-size: 42px;
+}
+
+.slider .subtitle {
+    color: #acacac;
+    font-size: 20px;
+}
+
+.slider .links {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    background: #f3f3f3;
+    color: #8f8f8f;
+    counter-reset: list 0;
+}
+
+.slider .links li {
+    display: inline-block;
+    margin-right: 55px;
+    font-size: 18px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.slider .links li.active {
+    color: #29c5e6;
+}
+
+.slider .links li:before {
+    display: inline-block;
+    margin-right: 10px;
+    width: 23px;
+    background: #8f8f8f;
+    color: #fff;
+    content: counter(list) " ";
+    counter-increment: list;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slider .links li.active:before {
+    background: #29c5e6;
+}
+
+.teaser {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+    vertical-align: top;
+}
+
+.teaser .heading {
+    margin: 40px 0 20px;
+    height: 16px;
+    background: transparent url(../images/h1-bg.png);
+}
+
+.teaser .bullet {
+    display: inline-block;
+    margin-right: -4px;
+    width: 16px;
+    height: 16px;
+    background: #29c5e6;
+    vertical-align: top;
+}
+
+.teaser .heading-text {
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    background: url(../images/bg.png);
+    text-transform: uppercase;
+    font: normal 14px/16px 'Oswald', sans-serif;
+}
+
+.teaser .image {
+    float: left;
+    margin-right: 20px;
+}
+
+.teaser .small-block {
+    margin-bottom: 10px;
+}
+
+.teaser .small-block .image {
+    margin-right: 10px;
+}
+
+.teaser .more,
+.teaser .more a {
+    margin-bottom: 0;
+    color: #525252;
+}
+
+.teaser-small-heading {
+    display: block;
+    margin: 0;
+    color: #525252;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.teaser-small-paragraph {
+    margin: 4px 0;
+    font-size: 11px;
+}
+
+.clients img {
+    display: inline-block;
+    margin-right: 30px;
+}

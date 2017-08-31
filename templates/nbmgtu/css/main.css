@@ -1,0 +1,41 @@
+/*
+.wrapper {
+    margin: auto;
+    max-width: 960px;
+}
+
+header {
+    padding: 20px 0;
+}
+
+
+aside + .item-page {
+    margin-left: 280px;
+    padding-bottom: 50px;
+}
+*/
+
+.main
+{
+ padding-top: 20px;
+ width: 100%;
+}
+
+.main .left
+{
+ width: 250px;
+ vertical-align: top;
+}
+
+.main .content
+{
+ text-align: justify;
+ padding: 10px;
+ vertical-align: top;
+}
+
+.main .right
+{
+ width: 250px;
+ vertical-align: top;
+}

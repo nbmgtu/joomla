@@ -1,0 +1,79 @@
+.moduletable
+{
+ box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ padding: 6px;
+ margin-bottom: 20px;
+
+ text-transform: uppercase;
+ font: 14px 'Oswald', sans-serif;
+
+ background: rgb(242, 240, 230);
+ border: solid 1px rgb(211, 204, 171);
+ border-radius: 6px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+}
+
+.moduletable .title
+{
+ text-align: center;
+ padding: 6px;
+
+ background: rgb(224, 190, 71);
+ border-radius: 6px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+}
+
+.moduletable ul.menu
+{
+ background: #555;
+ display: inline-block;
+ width: 100%;
+ list-style: none;
+ margin: 6px 0px 0px 0px;
+ padding: 0;
+ border-radius: 6px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+}
+
+.moduletable ul.menu li a
+{
+ color: #999;
+ display: block;
+ padding: 4px 10px;
+ text-decoration: none;
+}
+
+.moduletable ul.menu li a:hover
+{
+ color: #bbb;
+ background: rgba(0, 0, 0, 0.1);
+
+ border-radius: 6px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+}
+
+.moduletable ul.menu li.active a, .moduletable ul.menu li.active a:hover
+{
+ color: #fff;
+ background: rgba(0, 0, 0, 0.4);
+
+ border-radius: 6px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+}
+
+.moduletable ul.menu li.active > a:hover
+{
+ cursor: default;
+}
+
+.moduletable ul li + li a
+{
+ border-top: 1px solid rgba(255, 255, 255, 0.1);
+ box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+

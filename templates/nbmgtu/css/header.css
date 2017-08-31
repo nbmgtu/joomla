@@ -1,0 +1,18 @@
+.header
+{
+ width: 100%;
+ height: 223px;
+ background: url(../images/Header.jpg);
+}
+
+.header .left
+{
+ vertical-align: middle;
+/* text-align: center; */
+}
+
+.header .right
+{
+ width: 404px;
+ vertical-align: top;
+}

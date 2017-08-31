@@ -9,13 +9,13 @@
 	<version>1.0.0</version>
 	<description>MOD_FADEIMAGES_XML_DESCRIPTION</description>
 	<files>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
 		<filename>mod_fadeimages.xml</filename>
 		<filename>index.html</filename>
 		<filename>helper.php</filename>
 		<filename module="mod_fadeimages">mod_fadeimages.php</filename>
-		<filename>tmpl/default.php</filename>
-		<filename>tmpl/index.html</filename>
-		<filename>js/fadeimages.js</filename>
 	</files>
 	<languages>
 		<language tag="ru-RU">ru-RU.mod_fadeimages.ini</language>

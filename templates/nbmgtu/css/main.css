@@ -23,7 +23,7 @@ aside + .item-page {
 
 .main .left
 {
- width: 250px;
+ width: 220px;
  vertical-align: top;
 }
 
@@ -36,6 +36,88 @@ aside + .item-page {
 
 .main .right
 {
- width: 250px;
+ width: 220px;
  vertical-align: top;
 }
+
+.main .content .items-more
+{
+ border-top: 3px solid rgb(211, 204, 171);
+ margin-top: 10px;
+}
+
+.main .content .items-more .nav.nav-tabs.nav-stacked
+{
+ margin-top: 5px;
+ list-style: circle;
+}
+
+.main .content .items-more .nav.nav-tabs.nav-stacked a
+{
+ text-decoration: none;
+}
+
+/*
+.main .content .items-more .nav.nav-tabs.nav-stacked:before
+{
+ content: "More article...";
+}
+*/
+
+.main .content .pagination
+{
+ list-style-type: disc;
+}
+
+.main .content .pagination ul > li
+{
+ display: inline;
+}
+
+.main .content .pagination p.counter.pull-right
+{
+ float: none;
+ text-align: right;
+}
+
+.main .content .pagination ul > li:first-child > a, .main .content .pagination ul > li:first-child > span
+{
+ border-left-width: 1px;
+ -webkit-border-bottom-left-radius: 4px;
+ border-bottom-left-radius: 4px;
+ -webkit-border-top-left-radius: 4px;
+ border-top-left-radius: 4px;
+ -moz-border-radius-bottomleft: 4px;
+ -moz-border-radius-topleft: 4px;
+}
+
+.main .content .pagination ul > li:last-child > a, .main .content .pagination ul > li:last-child > span
+{
+ border-right-width: 1px;
+ -webkit-border-bottom-right-radius: 4px;
+ border-bottom-right-radius: 4px;
+ -webkit-border-top-right-radius: 4px;
+ border-top-right-radius: 4px;
+ -moz-border-radius-bottomright: 4px;
+ -moz-border-radius-topright: 4px;
+}
+
+.main .content .pagination ul > li > a, .main .content .pagination ul > li > span
+{
+ float: left;
+ padding: 4px 12px 5px 12px;
+ text-decoration: none;
+ border: 1px solid rgb(211, 204, 171);
+ border-left-width: 0;
+}
+
+.main .content .blog-featured .items-row
+{
+ border-top: 3px solid rgb(211, 204, 171);
+ margin-top: 10px;
+ padding-top: 10px;
+
+ background-image: url('../images/feature-item.png');
+ background-repeat: no-repeat;
+}
+

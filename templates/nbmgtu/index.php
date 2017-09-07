@@ -47,11 +47,11 @@ $this->setHtml5(true);
     <td class="content">
      <jdoc:include type="message"/>
 
-     <?php if ( !$is_home_page ): ?>
+     <?php /* if ( !$is_home_page ): ?>
      <div class="caption">
       <h1><?php echo $this->getTitle(); ?></h1>
      </div>
-     <?php endif;?>
+     <?php endif; */ ?>
 
      <jdoc:include type="component"/>
     </td>

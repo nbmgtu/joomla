@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+ <layout title="COM_PHOTOALBUM_VIEW_DEFAULT_TITLE" option="COM_PHOTOALBUM_VIEW_DEFAULT_OPTION">
+  <help key="JHELP_MENUS_MENU_ITEM_PHOTOALBUM" />
+  <message>
+   <![CDATA[COM_PHOTOALBUM_VIEW_DEFAULT_DESC]]>
+  </message>
+ </layout>
+
+ <fields name="params">
+  <fieldset name="request" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+   <field
+    name="folder"
+    type="text"
+    label="COM_PHOTOALBUM_FIELD_FOLDER_LABEL"
+    description="COM_PHOTOALBUM_FIELD_FOLDER_DESC"
+    size="50"
+    default="/images/stories/photoalbum/"
+    required="true"
+   />
+  </fieldset>
+ </fields>
+</metadata>

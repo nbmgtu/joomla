@@ -1,16 +1,47 @@
 <?php
 defined('_JEXEC') or die;
 
-$app = JFactory::getApplication();
-$doc = JFactory::getDocument();
-$menu = $app->getMenu();
-$lang = JFactory::getLanguage();
+$application = JFactory::getApplication();
+$document = JFactory::getDocument();
+$menu = $application->getMenu();
+$language = JFactory::getLanguage();
 
-$template_url = $this->baseurl . '/templates/' . $this->template;
-$doc->addStyleSheet($template_url . '/css/template.css');
-$doc->addStyleSheet('http://fonts.googleapis.com/css?family=Oswald:400,300');
+$template_url = "{$this->baseurl}/templates/{$this->template}";
 
-$is_home_page = $menu->getActive() == $menu->getDefault($lang->getTag());
+$document->addStyleSheet("{$template_url}/css/template.css");
+$document->addStyleSheet('http://fonts.googleapis.com/css?family=Oswald:400,300');
+
+$document->setMetaData("X-UA-Compatible", "IE=Edge", "http-equiv");
+$document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array('conditional' => 'lt IE 9'));
+
+// jquery
+$document->addScript("{$template_url}/assets/jquery/js/jquery.min.js");
+
+// lightcase
+$document->addStyleSheet("{$template_url}/assets/lightcase/css/lightcase.css");
+$document->addScript("{$template_url}/assets/lightcase/js/lightcase.js");
+$document->addScriptDeclaration("
+ jQuery(document).ready(function($) {
+  $('a[data-rel^=lightcase]').lightcase();
+ });
+");
+
+// options
+/*
+$document->addScriptOptions('mod_example',
+ array(
+  'colors' => array('selector' => 'body', 'color' => 'orange'),
+  'sliderOptions' => array('selector' => '.my-slider', 'timeout' => 300, 'fx' => 'fade')
+ )
+);
+<script>
+var myOptions = Joomla.getOptions('mod_example');
+console.log(myOptions.colors); // Print in the browser console your options
+console.log(myOptions.sliderOptions);
+</script>
+*/
+
+$is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 
 $this->setHtml5(true);
 ?>
@@ -19,9 +50,6 @@ $this->setHtml5(true);
  <head>
   <jdoc:include type="head"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <!--[if lt IE 9]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
  </head>
  <body>
 
@@ -47,11 +75,11 @@ $this->setHtml5(true);
     <td class="content">
      <jdoc:include type="message"/>
 
-     <?php /* if ( !$is_home_page ): ?>
+     <?php if ( !$is_home_page ): ?>
      <div class="caption">
       <h1><?php echo $this->getTitle(); ?></h1>
      </div>
-     <?php endif; */ ?>
+     <?php endif; ?>
 
      <jdoc:include type="component"/>
     </td>
@@ -63,6 +91,8 @@ $this->setHtml5(true);
   </table>
 
   <footer>
+   <jdoc:include type="modules" name="footer"/>
   </footer>
+
  </body>
 </html>

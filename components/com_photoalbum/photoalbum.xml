@@ -14,6 +14,7 @@
   <filename>index.html</filename>
   <filename>photoalbum.php</filename>
   <filename>controller.php</filename>
+  <filename>router.php</filename>
   <folder>css</folder>
   <folder>views</folder>
   <folder>models</folder>

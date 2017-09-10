@@ -1,11 +1,11 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class PhotoAlbumViewFolder extends JViewLegacy
+class PhotoAlbumViewFiles extends JViewLegacy
 {
  function display($tpl = null)
  {
-  $this->data = $this->get('Folders');
+  $this->data = $this->get('Files');
 
   if (count($errors = $this->get('Errors')))
   {

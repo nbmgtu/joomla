@@ -14,7 +14,6 @@
 		<folder>css</folder>
 		<filename>mod_fadeimages.xml</filename>
 		<filename>index.html</filename>
-		<filename>helper.php</filename>
 		<filename module="mod_fadeimages">mod_fadeimages.php</filename>
 	</files>
 	<languages>

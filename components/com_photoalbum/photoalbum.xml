@@ -21,7 +21,7 @@
  </files>
 
  <languages folder="site/language">
-  <language tag="en-GB">en-GB/en-GB.com_photoalbum.ini</language>
+  <language tag="ru-RU">ru-RU/ru-RU.com_photoalbum.ini</language>
  </languages>
 
  <administration>
@@ -31,7 +31,7 @@
   </files>
 
   <languages folder="admin/language">
-   <language tag="en-GB">en-GB/en-GB.com_photoalbum.sys.ini</language>
+   <language tag="ru-RU">ru-RU/ru-RU.com_photoalbum.sys.ini</language>
   </languages>
 
  </administration>

@@ -27,7 +27,7 @@ class PhotoAlbumModelAlbums extends JModelItem
 
   if ( !($hAlbum = opendir($this->local)) )
   {
-   $this->setError(JText::_('PHOTOALBUM_FOLDERNOTOPENED').": {$this->local}");
+   $this->setError(JText::_('COM_PHOTOALBUM_FOLDERNOTOPENED').": {$this->local}");
    return false;
   }
 

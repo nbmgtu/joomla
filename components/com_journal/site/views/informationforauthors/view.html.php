@@ -1,14 +1,6 @@
 <?php
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-jimport( 'joomla.application.component.view');
+require_once('components/com_journal/views/view.html.php');
 
-require_once(JPATH_BASE.DS.'components/com_journal/views/view.utils.php');
-
-class JournalViewInformationforauthors extends UtilsView
-{
- function display($tpl = null)
- {
-  parent::display($tpl);
- }
-}
+class JournalViewInformationforauthors extends JournalView {}

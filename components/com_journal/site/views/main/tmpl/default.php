@@ -1,6 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 ?>
+<div class="journal">
 <h2><?php echo $this->data['title']; ?></h2>
 <ul class="menu">
 <li><a href="<?php echo $this->data['link']['editorialboard']; ?>" class="category"><?php echo JText::_('COM_JOURNAL_EDITORBOARD'); ?></a></li>
@@ -8,5 +9,5 @@ defined('_JEXEC') or die('Restricted access');
 <li><a href="<?php echo $this->data['link']['informationforauthors']; ?>" class="category"><?php echo JText::_('COM_JOURNAL_INFORMATIONFORAUTHORS'); ?></a></li>
 </ul>
 <br>
-
 <?php echo $this->ShowLangPage($this->data['content'], $this->data['link']['logo']); ?>
+</div>

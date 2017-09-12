@@ -41,7 +41,7 @@ console.log(myOptions.sliderOptions);
 </script>
 */
 
-$is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
+// $is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 
 $this->setHtml5(true);
 ?>
@@ -75,11 +75,15 @@ $this->setHtml5(true);
     <td class="content">
      <jdoc:include type="message"/>
 
-     <?php if ( !$is_home_page ): ?>
+     <?php if ($this->params->get('show_page_heading', FALSE)) : ?>
+      <h1><?php echo $this->params->get('page_heading') ? $this->params->get('page_heading') : JFactory::getApplication()->getMenu()->getActive()->title; ?></h1>
+     <?php endif; ?>
+
+     <?php /* if ( !$is_home_page ): ?>
      <div class="caption">
       <h1><?php echo $this->getTitle(); ?></h1>
      </div>
-     <?php endif; ?>
+     <?php endif; */ ?>
 
      <jdoc:include type="component"/>
     </td>

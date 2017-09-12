@@ -20,12 +20,15 @@ body {
 }
 
 a {
- color: #B3911A;
+ color: #887A44;
+ text-decoration: none;
 }
 
 a:visited {
- color: #B3911A;
+ color: #887A44;
+ text-decoration: none;
 }
+
 /*
 p {
     margin: 20px 0;

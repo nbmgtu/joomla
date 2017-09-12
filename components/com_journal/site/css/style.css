@@ -1,17 +1,36 @@
-TABLE.issues {
+div.journal TABLE.issues
+{
  width: 100%;
  border-bottom: solid 2px #F0DC7E;
  border-left: solid 2px #F0DC7E;
 }
 
-TABLE.issues TH {
+div.journal TABLE.issues TH
+{
  background-color: #F3F1E7;
 }
 
-P.caption {
+div.journal P.caption
+{
  text-align: left;
  border-top: solid 2px #F0DC7E;
  border-bottom: solid 2px #F0DC7E;
  background-color: #F3F1E7;
  padding: 5px;
+}
+
+div.journal ul.menu
+{
+ text-align: left;
+ border-top: solid 2px #F0DC7E;
+ border-bottom: solid 2px #F0DC7E;
+ background-color: #F3F1E7;
+ padding: 5px;
+}
+
+div.journal ul.menu li
+{
+ list-style-type: none;
+ padding: 0px 0 0px 10px;
+ line-height: 1.4;
 }

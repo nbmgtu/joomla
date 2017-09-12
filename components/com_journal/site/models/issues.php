@@ -8,12 +8,6 @@ class JournalModelIssues extends JournalModel
  function getData()
  {
   $this->init();
-/*
-  $issue = $application->input->get('issue', '', 'CMD');
-  $this->issue = preg_match($this->pattern, $issue, $matches)
-   ? array('folder' => "{$this->folder}/{$issue}/", 'local' => "{$this->local}/{$issue}/", 'year' => $matches[1], 'number' => $matches[2])
-   : false;
-*/
 
   $issues = array();
 

@@ -60,6 +60,6 @@ class JournalModelIssue extends JournalModel
    $body = str_replace("%HASPAGE%", ($haspage ? "oglavl" : ""), $body);
   }
 
-  return array(/* 'folder' => $this->folder, 'local' => $this->local, */'title' => "{$this->title}, ".JText::_('COM_JOURNAL_ISSUES_ISSUE')." {$matches[2]} ({$matches[1]})", 'content' => $this->content);
+  return array('title' => "{$this->title}, ".JText::_('COM_JOURNAL_ISSUES_ISSUE')." {$matches[2]} ({$matches[1]})", 'content' => $this->content);
  }
 }

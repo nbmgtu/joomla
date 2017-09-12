@@ -20,7 +20,7 @@ function audio_end(obj) {
 </script>';
     }
 */
-echo "<div class=\"right\">".JText::_('PHOTOALBUM_HITS').": {$this->data['hits']}<br><a href=\"{$this->data['back']}\">".JText::_('PHOTOALBUM_BACK')."</a></div>";
+echo "<div class=\"right\">".JText::_('COM_PHOTOALBUM_HITS').": {$this->data['hits']}<br><a href=\"{$this->data['back']}\">".JText::_('COM_PHOTOALBUM_BACK')."</a></div>";
 
 echo "<table border=\"0\" align=\"center\" cellspacing=\"4\" cellpadding=\"4\">";
 
@@ -52,4 +52,4 @@ foreach ($this->data['files'] as $param)
 }
 echo '</table>';
 
-echo "<p class=\"back\"><a href=\"{$this->data['back']}\">".JText::_('PHOTOALBUM_BACK')."</a></p>";
+echo "<p class=\"back\"><a href=\"{$this->data['back']}\">".JText::_('COM_PHOTOALBUM_BACK')."</a></p>";

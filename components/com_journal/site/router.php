@@ -1,40 +1,30 @@
 <?php
 defined('_JEXEC') or die;
 
-function journalRoute(&$query)
+function journalBuildRoute(&$query)
 {
  $segments = array();
-/*
-print_r($query);
- if (isset($query['kurs']))
+
+ if (isset($query['view']))
  {
-  $segments[] = $query['kurs'];
-  unset($query['kurs']);
+  $segments[] = $query['view'];
+  unset($query['view']);
  }
- else if (isset($query['facultet']))
+ else if (isset($query['issue']))
  {
-  $segments[] = $query['facultet'];
-  unset($query['facultet']);
+  $segments[] = $query['issue'];
+  unset($query['issue']);
  }
- else if (isset($query['mode']))
- {
-  $segments[] = $query['mode'];
-  unset($query['mode']);
- }
-*/
+
  return $segments;
 }
 
 function journalParseRoute($segments)
 {
  $vars = array();
-/*
- if ( count($segments) != 3 ) return $vars;
 
-// $vars['view'] = 'files';
- $vars['kurs'] = $segments[0];
- $vars['facultet'] = $segments[1];
- $vars['mode'] = $segments[2];
-*/
+ if ( !empty($segments[0]) ) $vars['view'] = $segments[0];
+ if ( !empty($segments[1]) ) $vars['issue'] = $segments[1];
+
  return $vars;
 }

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
- <layout title="COM_DEBTS_VIEW_DEFAULT_TITLE" option="COM_DEBTS_VIEW_DEFAULT_OPTION">
+ <layout title="COM_JOURNAL_VIEW_DEFAULT_TITLE" option="COM_JOURNAL_VIEW_DEFAULT_OPTION">
   <help key="JHELP_MENUS_MENU_ITEM_PHOTOALBUM" />
   <message>
-   <![CDATA[COM_DEBTS_VIEW_DEFAULT_DESC]]>
+   <![CDATA[COM_JOURNAL_VIEW_DEFAULT_DESC]]>
   </message>
  </layout>
 
  <fields name="params">
   <fieldset name="request" label="COM_MENUS_BASIC_FIELDSET_LABEL">
    <field
-    name="url"
+    name="folder"
     type="text"
-    label="COM_DEBTS_FIELD_FOLDER_LABEL"
-    description="COM_DEBTS_FIELD_FOLDER_DESC"
+    label="COM_JOURNAL_FIELD_FOLDER_LABEL"
+    description="COM_JOURNAL_FIELD_FOLDER_DESC"
     size="100"
-    default="http://192.168.5.1/report_chit.php"
+    default="/images/journal-nt/"
     required="true"
    />
   </fieldset>

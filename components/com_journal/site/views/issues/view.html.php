@@ -1,12 +1,6 @@
 <?php
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-jimport( 'joomla.application.component.view');
+require_once('/usr/local/www/apache24/data/components/com_journal/views/view.html.php');
 
-class JournalViewIssues extends JView
-{
- function display($tpl = null)
- {
-  parent::display($tpl);
- }
-}
+class JournalViewIssues extends JournalView {}

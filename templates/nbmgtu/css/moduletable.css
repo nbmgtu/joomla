@@ -4,14 +4,17 @@
  padding: 6px;
  margin-bottom: 20px;
 
- text-transform: uppercase;
- font: 14px 'Oswald', sans-serif;
-
  background: rgb(242, 240, 230);
  border: solid 1px rgb(211, 204, 171);
  border-radius: 6px;
  -webkit-border-radius: 6px;
  -moz-border-radius: 6px;
+}
+
+.moduletable a, .moduletable .title
+{
+ text-transform: uppercase;
+ font: 1em 'Oswald';
 }
 
 .moduletable .title

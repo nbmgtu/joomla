@@ -3,7 +3,7 @@
  background: rgb(85, 85, 85);
  border-bottom: 0;
  padding: 8px 6px 0px 6px;
- height: 37px;
+ height: 36px;
 }
 
 .navigation .mainmenu .menu
@@ -24,16 +24,20 @@
 {
  display: inline-block;
  margin: 0px 3px 0px 3px;
- padding: 6px 20px 10px 20px;
+ padding: 6px 20px 6px 20px;
  list-style-position: inside;
- text-transform: uppercase;
- font: 14px 'Oswald', sans-serif;
 
  background: linear-gradient(0deg, rgb(51, 51, 51), rgb(120, 120, 120));
 
  border-radius: 6px 6px 0px 0px;
  -webkit-border-radius: 6px 6px 0px 0px;
  -moz-border-radius: 6px 6px 0px 0px;
+}
+
+.navigation .menu li a
+{
+ text-transform: uppercase;
+ font: 1em 'Oswald';
 }
 
 .navigation .menu li.current

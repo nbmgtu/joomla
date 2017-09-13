@@ -1,28 +1,19 @@
-window.addEventListener ? window.addEventListener('load', FADEIMAGES_init, false) : window.attachEvent('onload', FADEIMAGES_init);
+var FADEIMAGES_IMAGES, FADEIMAGES_STEP, FADEIMAGES_INTERVAL, FADEIMAGES_SLEEP, FADEIMAGES_BASEDIR, FADEIMAGES_arrLen, FADEIMAGES_currImg,
+    FADEIMAGES_imgs, FADEIMAGES_img0, FADEIMAGES_img0Opacity, FADEIMAGES_img1, FADEIMAGES_img1Opacity, FADEIMAGES_fadding;
 
-var FADEIMAGES_IMAGES = new Array();
-var FADEIMAGES_arrLen;
-var FADEIMAGES_currImg;
-var FADEIMAGES_imgs;
-var FADEIMAGES_img0 = 0;
-var FADEIMAGES_img0Opacity = 100;
-var FADEIMAGES_img1 = 1;
-var FADEIMAGES_img1Opacity = 0;
-var FADEIMAGES_STEP = 2;
-var FADEIMAGES_INTERVAL = 35;
-var FADEIMAGES_SLEEP = 3000;
-var FADEIMAGES_BASEDIR;
-var FADEIMAGES_fadding = false;
-
-function FADEIMAGES_init()
-{
+$(function() {
  var opt = Joomla.getOptions('mod_fadeimages');
-
  FADEIMAGES_IMAGES = opt['files'];
  FADEIMAGES_STEP = opt['step'];
  FADEIMAGES_INTERVAL = opt['interval'];
  FADEIMAGES_SLEEP = opt['sleep'];
  FADEIMAGES_BASEDIR = opt['inet'];
+
+ FADEIMAGES_img0 = 0;
+ FADEIMAGES_img0Opacity = 100;
+ FADEIMAGES_img1 = 1;
+ FADEIMAGES_img1Opacity = 0;
+ FADEIMAGES_fadding = false;
 
  FADEIMAGES_arrLen = FADEIMAGES_IMAGES.length;
  if ( FADEIMAGES_arrLen < 2) return;
@@ -58,7 +49,8 @@ function FADEIMAGES_init()
 
  FADEIMAGES_fadding = true;
  setTimeout("FADEIMAGES_crossFade()", FADEIMAGES_SLEEP);
-}
+
+});
 
 function FADEIMAGES_crossFade()
 {

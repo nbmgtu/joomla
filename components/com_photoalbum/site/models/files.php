@@ -34,6 +34,24 @@ class PhotoAlbumModelFiles extends JModelItem
   file_put_contents($fname, $this->hits);
  }
 
+ function getAudios()
+ {
+  $this->init();
+  if ( !($hAlbum = opendir($this->local)) ) return false;
+
+  $regex_audio = '/\.mp3$/i';
+  $files = array();
+
+  while (($filename = readdir($hAlbum)) !== false)
+  {
+   if ( !is_file("{$this->local}/{$filename}") ) continue;
+   if ( preg_match($regex_audio, $filename) ) $files[] = "{$this->local_inet}/{$filename}";
+  }
+  closedir($hAlbum);
+
+  return $files;
+ }
+
  function getFiles()
  {
   $this->init();

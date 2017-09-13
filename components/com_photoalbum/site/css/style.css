@@ -1,32 +1,36 @@
-TD.tmb {
+.photoalbum TD.tmb {
 border: 1px solid #D4CCAA;
 background-color: #F2F0E6;
 valign: middle;
 text-align: center;
 padding: 5px;
 }
-TD.comment {
+
+.photoalbum TD.comment {
 text-align: left;
 padding: 10px;
 border: 1px solid #D4CCAA;
 /*background-color: #F2F0E6;*/
 /* font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Sans-Serif; */
 /* color: #393E37; */
-font-size: 12px;
+# font-size: 12px;
 text-align: justify;
 }
-P.back {
+
+.photoalbum P.back {
 text-align: right;
 padding-right: 10px;
 }
-P.readme {
+
+.photoalbum P.readme {
 border-bottom: 1px solid #D4CCAA;
 border-top: 1px solid #D4CCAA;
 background-color: #F2F0E6;
 margin: 10px;
 padding: 10px;
 }
-P.error {
+
+.photoalbum P.error {
 border-bottom: 2px solid #D4CCAA;
 border-top: 2px solid #D4CCAA;
 background-color: #F2F0E6;
@@ -34,13 +38,15 @@ margin: 10px;
 padding: 10px;
 color: darkblue;
 }
-DIV.left {
+
+.photoalbum DIV.left {
  float: left;
  text-align: left;
  margin-left: 10px;
  margin-bottom: 10px;
 }
-DIV.right {
+
+.photoalbum DIV.right {
  float: right;
  text-align: right;
  margin-right: 10px;

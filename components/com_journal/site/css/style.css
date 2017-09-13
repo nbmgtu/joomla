@@ -19,6 +19,16 @@ div.journal P.caption
  padding: 5px;
 }
 
+div.journal P.jheader
+{
+ border-top: 1px solid #D4CCAA;
+ border-bottom: 1px solid #D4CCAA;
+ background-color: #F2F0E6;
+ text-align: center;
+ font-weight: bold;
+ padding: 5px;
+}
+
 div.journal ul.menu
 {
  text-align: left;
@@ -31,6 +41,29 @@ div.journal ul.menu
 div.journal ul.menu li
 {
  list-style-type: none;
- padding: 0px 0 0px 10px;
+ padding: 0 0 0 1em;
  line-height: 1.4;
+}
+
+div.journal
+{
+ position: relative;
+}
+
+div.journal ul.oglavl
+{
+ padding: 0 4em 0 1em;
+}
+
+div.journal ul.oglavl li
+{
+ margin: 0.5em 0 0.5em 0;
+ list-style-type: none;
+}
+
+
+div.journal ul.oglavl span.page
+{
+ position: absolute;
+ right: 0;
 }

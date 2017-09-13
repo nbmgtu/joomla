@@ -1,6 +1,8 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+echo "<div class=\"photoalbum\">";
+
 if ( !empty($this->data['readme']) ) echo "<p class=\"readme\">{$this->data['readme']}</p>";
 
 echo '<br><table border="0" align="center" cellspacing="4" cellpadding="4" width="95%">';
@@ -13,3 +15,4 @@ foreach ($this->data['albums'] as $album => $param)
  echo "<td class=\"comment\">{$param['readme']}";
 }
 echo '</table>';
+echo '</div>';

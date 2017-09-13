@@ -1,3 +1,7 @@
+* {
+ font-family: Tahoma;
+}
+
 body {
  width: 1200px;
  margin: 0px auto 0px auto;
@@ -15,7 +19,6 @@ body {
  -moz-border-radius: 0px 0px 6px 6px;
  border-top: 0;
 
- font: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Sans-Serif;
  color: #393E37;
 }
 

@@ -10,12 +10,14 @@ function debtsBuildRoute(&$query)
   $segments[] = $query['kurs'];
   unset($query['kurs']);
  }
- else if (isset($query['facultet']))
+
+ if (isset($query['facultet']))
  {
   $segments[] = $query['facultet'];
   unset($query['facultet']);
  }
- else if (isset($query['mode']))
+
+ if (isset($query['mode']))
  {
   $segments[] = $query['mode'];
   unset($query['mode']);

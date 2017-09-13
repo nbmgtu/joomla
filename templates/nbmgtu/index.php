@@ -6,25 +6,19 @@ $document = JFactory::getDocument();
 $menu = $application->getMenu();
 $language = JFactory::getLanguage();
 
-$template_url = "{$this->baseurl}/templates/{$this->template}";
+$template = "/templates/{$this->template}";
 
-$document->addStyleSheet("{$template_url}/css/template.css");
+$document->addStyleSheet("{$template}/css/template.css");
 $document->addStyleSheet('http://fonts.googleapis.com/css?family=Oswald:400,300');
 
 $document->setMetaData("X-UA-Compatible", "IE=Edge", "http-equiv");
 $document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array('conditional' => 'lt IE 9'));
 
-// jquery
-$document->addScript("{$template_url}/assets/jquery/js/jquery.min.js");
-
 // lightcase
-$document->addStyleSheet("{$template_url}/assets/lightcase/css/lightcase.css");
-$document->addScript("{$template_url}/assets/lightcase/js/lightcase.js");
-$document->addScriptDeclaration("
- jQuery(document).ready(function($) {
-  $('a[data-rel^=lightcase]').lightcase();
- });
-");
+$document->addStyleSheet("{$template}/assets/lightcase/css/lightcase.css");
+$document->addScript("{$template}/assets/lightcase/js/lightcase.js");
+
+$document->addScript("{$template}/js/script.js");
 
 // $is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 
@@ -33,6 +27,7 @@ $this->setHtml5(true);
 <!doctype html>
 <html>
  <head>
+  <script src="/templates/nbmgtu/assets/jquery/js/jquery.min.js"></script>
   <jdoc:include type="head"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
  </head>

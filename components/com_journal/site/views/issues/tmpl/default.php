@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access');
 <tr><th>#<th><?php echo JText::_('COM_JOURNAL_ISSUES_ISSUES'); ?><th><?php echo JText::_('COM_JOURNAL_ISSUES_HITS'); ?>
 <?php
  foreach ( $this->data['issues'] as $id => $issue )
-  echo "<tr><td>{$id}<td><a href=\"{$issue['link']}\">{$issue['title']})</a><td align=right>{$issue['hits']}";
+  echo "<tr><td>{$id}<td><a href=\"{$issue['link']}\">{$issue['title']}</a><td align=right>{$issue['hits']}";
 ?>
 </table>
 </div>

@@ -52,11 +52,6 @@ aside + .item-page {
  list-style: circle;
 }
 
-.main .content .items-more .nav.nav-tabs.nav-stacked a
-{
- text-decoration: none;
-}
-
 /*
 .main .content .items-more .nav.nav-tabs.nav-stacked:before
 {
@@ -106,7 +101,6 @@ aside + .item-page {
 {
  float: left;
  padding: 4px 12px 5px 12px;
- text-decoration: none;
  border: 1px solid rgb(211, 204, 171);
  border-left-width: 0;
 }

@@ -27,6 +27,7 @@
 
  <positions>
   <position>mainmenu</position>
+  <position>fastbutton</position>
   <position>fadeimages</position>
   <position>left</position>
   <position>right</position>

@@ -26,21 +26,6 @@ $document->addScriptDeclaration("
  });
 ");
 
-// options
-/*
-$document->addScriptOptions('mod_example',
- array(
-  'colors' => array('selector' => 'body', 'color' => 'orange'),
-  'sliderOptions' => array('selector' => '.my-slider', 'timeout' => 300, 'fx' => 'fade')
- )
-);
-<script>
-var myOptions = Joomla.getOptions('mod_example');
-console.log(myOptions.colors); // Print in the browser console your options
-console.log(myOptions.sliderOptions);
-</script>
-*/
-
 // $is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 
 $this->setHtml5(true);
@@ -54,7 +39,14 @@ $this->setHtml5(true);
  <body>
 
   <div class="navigation">
-   <jdoc:include type="modules" name="mainmenu"/>
+   <div class="mainmenu">
+    <jdoc:include type="modules" name="mainmenu"/>
+   </div>
+   <div class="fastbutton">
+    <ul class="menu">
+     <jdoc:include type="modules" name="fastbutton"/>
+    </ul>
+   </div>
   </div>
 
   <table class="header" cellspacing="0" cellpadding="6px">

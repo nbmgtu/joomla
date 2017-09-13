@@ -2,13 +2,22 @@
 {
  background: rgb(85, 85, 85);
  border-bottom: 0;
- padding: 8px 6px 0px 6px
+ padding: 8px 6px 0px 6px;
+ height: 37px;
 }
 
-.navigation .menu
+.navigation .mainmenu .menu
 {
  margin: 0;
  padding: 0;
+ float: left;
+}
+
+.navigation .fastbutton .menu
+{
+ margin: 0;
+ padding: 0;
+ float: right;
 }
 
 .navigation .menu li
@@ -39,7 +48,6 @@
 .navigation .menu a
 {
  color: #b2b2b2;
- text-decoration: none;
 }
 
 .navigation .menu li.current a
@@ -60,3 +68,4 @@
 {
  color: #000;
 }
+

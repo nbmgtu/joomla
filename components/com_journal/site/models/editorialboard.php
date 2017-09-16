@@ -9,7 +9,7 @@ class JournalModelEditorialboard extends JournalModel
  {
   $this->init();
 
-  foreach ($this->content as $language => &$body) $body = @file_get_contents("{$this->local}/editorialboard_{$language}.htm");
+  foreach ($this->content as $language => &$body) $body = @file_get_contents("{$this->local}editorialboard_{$language}.htm");
 
   return array('title' => $this->title, 'content' => $this->content);
  }

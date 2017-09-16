@@ -3,14 +3,6 @@ defined('_JEXEC') or die('Restricted access');
 
 class PhotoAlbumModelFiles extends JModelItem
 {
- private $folder;
- private $local;
- private $local_inet;
- private $cache;
- private $cache_inet;
- private $album;
- private $hits;
-
  function init()
  {
   if ( !empty($this->folder) ) return;
@@ -20,18 +12,25 @@ class PhotoAlbumModelFiles extends JModelItem
 
   $this->folder = $params->get('folder');
   $this->album = $application->input->get('album', '', 'CMD');
-  $this->local_inet = "{$this->folder}/{$this->album}";
+  $this->local_inet = "{$this->folder}{$this->album}/";
   $this->local = JPATH_BASE.$this->local_inet;
-  $this->cache_inet = "/cache/{$this->option}{$this->folder}/$this->album";
+  $this->cache_inet = "/cache/{$this->option}{$this->folder}{$this->album}/";
   $this->cache = JPATH_BASE.$this->cache_inet;
  }
 
- function setHits()
+ function setHits($hash)
  {
-  @mkdir($this->cache, 0755, true);
-  $fname = "{$this->cache}/.hits";
-  $this->hits = intval(@file_get_contents($fname)) + 1;
-  file_put_contents($fname, $this->hits);
+  $db = JFactory::getDbo();
+  $db->setQuery("SELECT `hits` FROM `#__{$this->option}` WHERE `hash` = '{$hash}'");
+  $hits = intval($db->loadResult()) + 1;
+  $db->setQuery("UPDATE `#__{$this->option}` SET `hits` = `hits` + 1 WHERE `hash` = '{$hash}'");
+  $db->execute();
+  if ( $db->getAffectedRows() <= 0 ) {
+   $db->setQuery("REPLACE INTO `#__{$this->option}` SET `hits` = {$hits}, `hash` = '{$hash}'");
+   $db->execute();
+  }
+
+  return $hits;
  }
 
  function getAudios()
@@ -44,8 +43,8 @@ class PhotoAlbumModelFiles extends JModelItem
 
   while (($filename = readdir($hAlbum)) !== false)
   {
-   if ( !is_file("{$this->local}/{$filename}") ) continue;
-   if ( preg_match($regex_audio, $filename) ) $files[] = "{$this->local_inet}/{$filename}";
+   if ( !is_file("{$this->local}{$filename}") ) continue;
+   if ( preg_match($regex_audio, $filename) ) $files[] = "{$this->local_inet}{$filename}";
   }
   closedir($hAlbum);
 
@@ -55,7 +54,7 @@ class PhotoAlbumModelFiles extends JModelItem
  function getFiles()
  {
   $this->init();
-  $this->setHits();
+  $this->hits = $this->setHits(md5("{$this->folder}{$this->album}"));
 
   if ( !($hAlbum = opendir($this->local)) )
   {
@@ -69,10 +68,10 @@ class PhotoAlbumModelFiles extends JModelItem
 
   while (($filename = readdir($hAlbum)) !== false)
   {
-   $path = "{$this->local}/{$filename}";
-   $path_inet = "{$this->local_inet}/{$filename}";
-   $path_cache = "{$this->cache}/{$filename}";
-   $path_cache_inet = "{$this->cache_inet}/{$filename}";
+   $path = "{$this->local}{$filename}";
+   $path_inet = "{$this->local_inet}{$filename}";
+   $path_cache = "{$this->cache}{$filename}";
+   $path_cache_inet = "{$this->cache_inet}{$filename}";
 
    if ( !is_file($path) ) continue;
 
@@ -99,7 +98,7 @@ class PhotoAlbumModelFiles extends JModelItem
    return false;
   }
 
-  $readme = @file_get_contents("{$this->local}/readme");
+  $readme = @file_get_contents("{$this->local}readme");
 
   return array('readme' => $readme, 'hits' => $this->hits, 'back' => JRoute::_(array('view' => false, 'album' => false)), 'files' => $files);
  }
@@ -133,8 +132,8 @@ class PhotoAlbumModelFiles extends JModelItem
 
   switch ( strtolower(substr($dest, -3, 3)) )
   {
-   case 'jpg': imagejpeg($tmp, $dest, 75); break;
-   case 'png': imagepng($tmp, $dest, 7); break;
+   case 'jpg': @imagejpeg($tmp, $dest, 75); break;
+   case 'png': @imagepng($tmp, $dest, 7); break;
   }
 
   imagedestroy($src);

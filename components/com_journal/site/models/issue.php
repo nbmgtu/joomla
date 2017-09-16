@@ -5,6 +5,21 @@ require_once('components/com_journal/models/default.php');
 
 class JournalModelIssue extends JournalModel
 {
+ function setHits($hash)
+ {
+  $db = JFactory::getDbo();
+  $db->setQuery("SELECT `hits` FROM `#__{$this->option}` WHERE `hash` = '{$hash}'");
+  $hits = intval($db->loadResult()) + 1;
+  $db->setQuery("UPDATE `#__{$this->option}` SET `hits` = `hits` + 1 WHERE `hash` = '{$hash}'");
+  $db->execute();
+  if ( $db->getAffectedRows() <= 0 ) {
+   $db->setQuery("REPLACE INTO `#__{$this->option}` SET `hits` = {$hits}, `hash` = '{$hash}'");
+   $db->execute();
+  }
+
+  return $hits;
+ }
+
  function getData()
  {
   $this->init();
@@ -13,22 +28,18 @@ class JournalModelIssue extends JournalModel
   $params = $application->getParams();
 
   $issue = $application->input->get('issue', '', 'CMD');
-  if ( !preg_match($this->pattern, $issue, $matches) || !($local = "{$this->local}/{$issue}/") || !is_dir($local) )
+  if ( !preg_match($this->pattern, $issue, $matches) || !($local = "{$this->local}{$issue}/") || !is_dir($local) )
   {
    $this->setError(JText::_('COM_JOURNAL_ISSUE_NOTFOUND').": {$issue}");
    return;
   }
 
-  $folder = "{$this->folder}/{$issue}/";
-
-  // get/set hits
-  $fname = "{$this->local}/{$issue}/hits";
-  $hits = intval(file_get_contents($fname)) + 1;
-  @file_put_contents($fname, $hits);
+  $folder = "{$this->folder}{$issue}/";
+  $hits = $this->setHits(md5($folder));
 
   foreach ($this->content as $language => &$body)
   {
-   $data = @file("{$local}/content_{$language}.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+   $data = @file("{$local}content_{$language}.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
    if ( empty($data) ) continue;
 
    $fid = 0;
@@ -52,7 +63,7 @@ class JournalModelIssue extends JournalModel
      $page = trim(@$tmp[2]);
      if ( !empty($page) ) $haspage = true;
      $fname = sprintf('%03d', $fid);
-     $body .= "<li><span class=\"text\"><a href=\"{$folder}/{$fname}.pdf\" target=\"_blank\"><b>{$author}</b> {$name}</a></span><span class=\"page\">{$page}</span></li>";
+     $body .= "<li><span class=\"text\"><a href=\"{$folder}{$fname}.pdf\" target=\"_blank\"><b>{$author}</b> {$name}</a></span><span class=\"page\">{$page}</span></li>";
     }
 
    }

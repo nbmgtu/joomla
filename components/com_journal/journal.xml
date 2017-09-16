@@ -10,6 +10,12 @@
  <version>0.0.1</version>
  <description>COM_JOURNAL_DESCRIPTION</description>
 
+ <install>
+  <sql>
+   <file driver="mysql" charset="utf8">sql/install.sql</file>
+  </sql>
+ </install>
+
  <files folder="site">
   <filename>index.html</filename>
   <filename>journal.php</filename>
@@ -29,6 +35,7 @@
 
   <files folder="admin">
    <filename>index.html</filename>
+   <folder>sql</folder>
   </files>
 
   <languages folder="admin/language">

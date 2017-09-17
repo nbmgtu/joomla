@@ -5,11 +5,9 @@ $application = JFactory::getApplication();
 $document = JFactory::getDocument();
 $menu = $application->getMenu();
 $language = JFactory::getLanguage();
-$config = JFactory::getConfig();
 
 //echo "<pre>";
 //print_r($document);
-//print_r($application);
 //die;
 $document->_generator = NULL;
 $document->_links = array();
@@ -48,8 +46,6 @@ $document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array
  </head>
  <body>
 
-  <div class="sitename"><?php echo $config->get('sitename'); ?></div>
-
   <div class="navigation">
    <div class="mainmenu">
     <jdoc:include type="modules" name="mainmenu"/>
@@ -61,7 +57,14 @@ $document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array
    </div>
   </div>
 
-  <jdoc:include type="modules" name="header"/>
+  <table class="header" cellspacing="0" cellpadding="6px">
+   <tr>
+    <td class="left"><header>NBMGTU</header></td>
+    <td class="right">
+     <jdoc:include type="modules" name="fadeimages"/>
+    </td>
+   </tr>
+  </table>
 
   <table class="main">
    <tr>

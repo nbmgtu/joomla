@@ -11,7 +11,9 @@
 	<files>
 		<folder>tmpl</folder>
 		<folder>js</folder>
+		<folder>images</folder>
 		<folder>css</folder>
+		<folder>assets</folder>
 		<filename>mod_fadeimages.xml</filename>
 		<filename>index.html</filename>
 		<filename module="mod_fadeimages">mod_fadeimages.php</filename>
@@ -30,36 +32,6 @@
 					label="MOD_FADEIMAGES_FIELD_FOLDER_LABEL"
 					description="MOD_FADEIMAGES_FIELD_FOLDER_DESC"
 					default="/"
-				/>
-
-				<field
-					name="sleep"
-					type="text"
-					label="MOD_FADEIMAGES_FIELD_SLEEP_LABEL"
-					description="MOD_FADEIMAGES_SLEEP_DESC"
-					default="7000"
-					class="validate-numeric"
-					filter="integer"
-				/>
-
-				<field
-					name="step"
-					type="text"
-					label="MOD_FADEIMAGES_FIELD_STEP_LABEL"
-					description="MOD_FADEIMAGES_STEP_DESC"
-					default="2"
-					class="validate-numeric"
-					filter="integer"
-				/>
-
-				<field
-					name="interval"
-					type="text"
-					label="MOD_FADEIMAGES_FIELD_INTERVAL_LABEL"
-					description="MOD_FADEIMAGES_INTERVAL_DESC"
-					default="35"
-					class="validate-numeric"
-					filter="integer"
 				/>
 
 			</fieldset>

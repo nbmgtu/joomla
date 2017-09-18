@@ -35,7 +35,7 @@
  </positions>
 
  <languages folder="language">
-  <language tag="en-GB">en-GB/en-GB.tpl_nbmgtu.ini</language>
-  <language tag="en-GB">en-GB/en-GB.tpl_nbmgtu.sys.ini</language>
+  <language tag="ru-RU">ru-RU/ru-RU.tpl_nbmgtu.ini</language>
+  <language tag="ru-RU">ru-RU/ru-RU.tpl_nbmgtu.sys.ini</language>
  </languages>
 </extension>

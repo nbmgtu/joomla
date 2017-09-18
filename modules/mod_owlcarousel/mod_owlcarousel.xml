@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>MOD_OWLCAROUSED</name>
+	<author>Starodub Igor</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<description>MOD_OWLCAROUSED_XML_DESCRIPTION</description>
+	<files>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<filename>mod_owlcarousel.xml</filename>
+		<filename>index.html</filename>
+		<filename module="mod_owlcarousel">mod_owlcarousel.php</filename>
+	</files>
+	<languages>
+		<language tag="ru-RU">ru-RU.mod_owlcarousel.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_OWLCAROUSED" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="folder"
+					type="text"
+					label="MOD_OWLCAROUSED_FIELD_FOLDER_LABEL"
+					description="MOD_OWLCAROUSED_FIELD_FOLDER_DESC"
+					default="/"
+				/>
+
+			</fieldset>
+
+			<!--fieldset name="advanced" /-->
+		</fields>
+	</config>
+</extension>

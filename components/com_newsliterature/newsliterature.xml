@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+ <name>COM_NEWSLITERATURE</name>
+ <creationDate>September 2017</creationDate>
+ <author>Starodub Igor</author>
+ <authorEmail>starodub.xxx@gmail.com</authorEmail>
+ <authorUrl />
+ <copyright />
+ <license />
+ <version>0.0.2</version>
+ <description>COM_NEWSLITERATURE_DESCRIPTION</description>
+
+ <files folder="site">
+  <filename>index.html</filename>
+  <filename>newsliterature.php</filename>
+  <filename>controller.php</filename>
+  <filename>router.php</filename>
+  <folder>views</folder>
+  <folder>models</folder>
+ </files>
+
+ <languages folder="site/language">
+  <language tag="ru-RU">ru-RU/ru-RU.com_newsliterature.ini</language>
+ </languages>
+
+ <administration>
+
+  <files folder="admin">
+   <filename>index.html</filename>
+  </files>
+
+  <languages folder="admin/language">
+   <language tag="ru-RU">ru-RU/ru-RU.com_newsliterature.sys.ini</language>
+  </languages>
+
+ </administration>
+
+</extension>

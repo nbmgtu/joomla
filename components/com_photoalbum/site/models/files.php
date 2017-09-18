@@ -16,6 +16,8 @@ class PhotoAlbumModelFiles extends JModelItem
   $this->local = JPATH_BASE.$this->local_inet;
   $this->cache_inet = "/cache/{$this->option}{$this->folder}{$this->album}/";
   $this->cache = JPATH_BASE.$this->cache_inet;
+
+  @mkdir($this->cache, 0700, TRUE);
  }
 
  function setHits($hash)

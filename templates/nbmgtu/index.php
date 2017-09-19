@@ -7,10 +7,6 @@ $menu = $application->getMenu();
 $language = JFactory::getLanguage();
 $config = JFactory::getConfig();
 
-//echo "<pre>";
-//print_r($document);
-//print_r($application);
-//die;
 $document->_generator = NULL;
 $document->_links = array();
 $document->_scripts = array();
@@ -39,6 +35,7 @@ $document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array
 // $is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 
 //$this->setHtml5(true);
+
 
 ?>
 <!doctype html>

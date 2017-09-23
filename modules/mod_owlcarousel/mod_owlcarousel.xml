@@ -6,7 +6,7 @@
 	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>starodub.xxx@gmail.com</authorEmail>
-	<version>1.0.0</version>
+	<version>0.0.1</version>
 	<description>MOD_OWLCAROUSED_XML_DESCRIPTION</description>
 	<files>
 		<folder>tmpl</folder>

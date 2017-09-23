@@ -20,6 +20,9 @@ class PlgSystemTrustipforregister extends JPlugin
 
  public function onAfterInitialise()
  {
+  $application = JFactory::getApplication();
+  if ($application->isClient('administrator')) return;
+
   $usersConfig = JComponentHelper::getParams('com_users');
   if ( $usersConfig->get('allowUserRegistration')  )
   {
@@ -33,5 +36,7 @@ class PlgSystemTrustipforregister extends JPlugin
    }
   }
  }
+
+ public function __construct(&$subject, $config) { parent::__construct($subject, $config); }
 
 }

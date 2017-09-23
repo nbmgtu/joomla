@@ -7,11 +7,6 @@ $menu = $application->getMenu();
 $language = JFactory::getLanguage();
 $config = JFactory::getConfig();
 
-$document->_generator = NULL;
-$document->_links = array();
-$document->_scripts = array();
-$document->_script = array();
-
 $template = "/templates/{$this->template}";
 
 $document->addStyleSheet("{$template}/css/template.css");
@@ -20,17 +15,21 @@ $document->addStyleSheet('http://fonts.googleapis.com/css?family=Oswald:400,300'
 $document->setMetaData("X-UA-Compatible", "IE=Edge", "http-equiv");
 
 // JQuery
-$document->addScript("{$template}/assets/jquery/js/jquery.min.js");
+$document->addScript("{$template}/assets/jquery/jquery.min.js");
+
+// JQuery-UI
+$document->addStyleSheet("{$template}/assets/jquery-ui/jquery-ui.min.css");
+$document->addScript("{$template}/assets/jquery-ui/jquery-ui.min.js");
 
 // lightcase
 $document->addStyleSheet("{$template}/assets/lightcase/css/lightcase.css");
 $document->addScript("{$template}/assets/lightcase/js/lightcase.js");
-$document->addScriptDeclaration('$(function() {$("a[data-rel^=lightcase]").lightcase();});');
 
 // ?
 $document->addScript('http://html5shiv.googlecode.com/svn/trunk/html5.js', array('conditional' => 'lt IE 9'));
 
-//$document->addScript("{$template}/js/script.js");
+// init event
+$document->addScript("{$template}/js/main.js");
 
 // $is_home_page = $menu->getActive() == $menu->getDefault($language->getTag());
 

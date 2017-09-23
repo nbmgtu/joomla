@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_STRIP</name>
+	<author>Starodub Igor</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>starodub.xxx@google.com</authorEmail>
+	<authorUrl />
+	<version>0.0.1</version>
+	<description>PLG_STRIP_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="strip">strip.php</filename>
+	</files>
+	<languages>
+		<language tag="ru-RU">ru-RU.plg_system_strip.ini</language>
+		<language tag="ru-RU">ru-RU.plg_system_strip.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="links"
+					type="textarea"
+					rows="5"
+					label="PLG_STRIP_FIELD_LINKS_LABEL"
+					description="PLG_STRIP_FIELD_LINKS_DESC"
+				/>
+
+				<field
+					name="scripts"
+					type="textarea"
+					rows="5"
+					label="PLG_STRIP_FIELD_SCRIPTS_LABEL"
+					description="PLG_STRIP_FIELD_SCRIPTS_DESC"
+				/>
+
+				<field
+					name="styleSheets"
+					type="textarea"
+					rows="5"
+					label="PLG_STRIP_FIELD_STYLESHEETS_LABEL"
+					description="PLG_STRIP_FIELD_STYLESHEETS_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

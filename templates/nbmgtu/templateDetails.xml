@@ -27,6 +27,7 @@
  </files>
 
  <positions>
+  <position>counter</position>
   <position>mainmenu</position>
   <position>fastbutton</position>
   <position>header</position>

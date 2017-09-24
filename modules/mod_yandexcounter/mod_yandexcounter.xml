@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>MOD_YANDEXCOUNTER</name>
+	<author>Starodub Igor</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<version>0.0.1</version>
+	<description>MOD_YANDEXCOUNTER_XML_DESCRIPTION</description>
+	<files>
+		<filename>mod_yandexcounter.xml</filename>
+		<filename>yandexcounter.template</filename>
+		<filename>index.html</filename>
+		<filename module="mod_yandexcounter">mod_yandexcounter.php</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SPECIAL" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="yandexid"
+					type="text"
+					label="MOD_YANDEXCOUNTER_FIELD_YANDEXID_LABEL"
+					description="MOD_YANDEXCOUNTER_FIELD_YANDEXID_DESC"
+					filter="integer"
+					default=""
+				/>
+
+			</fieldset>
+
+			<!--fieldset name="advanced" /-->
+		</fields>
+	</config>
+</extension>

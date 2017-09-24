@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>MOD_YANDEXINFORMER</name>
+	<author>Starodub Igor</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>starodub.xxx@gmail.com</authorEmail>
+	<version>0.0.1</version>
+	<description>MOD_YANDEXINFORMER_XML_DESCRIPTION</description>
+	<files>
+		<filename>mod_yandexinformer.xml</filename>
+		<filename>yandexinformer.template</filename>
+		<filename>index.html</filename>
+		<filename module="mod_yandexinformer">mod_yandexinformer.php</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SPECIAL" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+					name="yandexid"
+					type="text"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXID_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXID_DESC"
+					filter="integer"
+					default=""
+				/>
+
+				<field
+					name="yandextextcolor"
+					type="list"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXTEXTCOLOR_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXTEXTCOLOR_DESC"
+					default="0"
+					>
+					<option value="0">MOD_YANDEXINFORMER_FIELD_YANDEXTEXTCOLOR_BLACK</option>
+					<option value="1">MOD_YANDEXINFORMER_FIELD_YANDEXTEXTCOLOR_WHITE</option>
+				</field>
+
+				<field
+					name="yandexcolorbegin"
+					type="text"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXCOLORBEGIN_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXCOLORBEGIN_DESC"
+					default="FFFFFFFF"
+				/>
+
+				<field
+					name="yandexcolorend"
+					type="text"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXCOLOREND_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXCOLOREND_DESC"
+					default="EFEFEFFF"
+				/>
+
+				<field
+					name="yandexarrowcolor"
+					type="list"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXARROWCOLOR_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXARROWCOLOR_DESC"
+					default="1"
+					>
+					<option value="0">MOD_YANDEXINFORMER_FIELD_YANDEXARROWCOLOR_BLACK</option>
+					<option value="1">MOD_YANDEXINFORMER_FIELD_YANDEXARROWCOLOR_PURPLE</option>
+				</field>
+
+				<field
+					name="yandexsize"
+					type="list"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXSIZE_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXSIZE_DESC"
+					default="3"
+					>
+					<option value="1">MOD_YANDEXINFORMER_FIELD_YANDEXSIZE_SMALL</option>
+					<option value="2">MOD_YANDEXINFORMER_FIELD_YANDEXSIZE_MIDLE</option>
+					<option value="3">MOD_YANDEXINFORMER_FIELD_YANDEXSIZE_BIG</option>
+				</field>
+
+				<field
+					name="yandexview"
+					type="list"
+					label="MOD_YANDEXINFORMER_FIELD_YANDEXVIEW_LABEL"
+					description="MOD_YANDEXINFORMER_FIELD_YANDEXVIEW_DESC"
+					default="pageviews"
+					>
+					<option value="pageviews">MOD_YANDEXINFORMER_FIELD_YANDEXVIEW_PAGEVIEWS</option>
+					<option value="visits">MOD_YANDEXINFORMER_FIELD_YANDEXVIEW_VISITS</option>
+					<option value="uniques">MOD_YANDEXINFORMER_FIELD_YANDEXVIEW_UNIQUES</option>
+				</field>
+
+			</fieldset>
+
+			<!--fieldset name="advanced" /-->
+		</fields>
+	</config>
+</extension>

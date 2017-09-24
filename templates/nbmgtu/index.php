@@ -43,6 +43,7 @@ $document->addScript("{$template}/js/main.js");
   <jdoc:include type="head"/>
  </head>
  <body>
+  <jdoc:include type="modules" name="counter"/>
 
   <div class="sitename"><?php echo $config->get('sitename'); ?></div>
 

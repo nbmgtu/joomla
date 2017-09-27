@@ -27,6 +27,13 @@
 					rows="10"
 					cols="30"
 				/>
+
+				<field
+					name="learnmgtuip"
+					type="text"
+					label="PLG_TRUSTIPFORREGISTER_FIELD_LEARNMGTUIP_LABEL"
+					description="PLG_TRUSTIPFORREGISTER_FIELD_AUTOMATIC_LEARNMGTUIP_DESC"
+				/>
 			</fieldset>
 		</fields>
 	</config>

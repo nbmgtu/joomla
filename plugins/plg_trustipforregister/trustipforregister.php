@@ -24,15 +24,34 @@ class PlgSystemTrustipforregister extends JPlugin
   if ($application->isClient('administrator')) return;
 
   $usersConfig = JComponentHelper::getParams('com_users');
-  if ( $usersConfig->get('allowUserRegistration')  )
+  if ( !$usersConfig->get('allowUserRegistration')  )
   {
+   $clientIP = $application->input->server->get('REMOTE_ADDR', '');
+
+   // enable auto registration for learn-mgtu server
+   $learnMGTUIP = $this->params->get('learnmgtuip', '');
+   if ( !empty($clientIP) && !empty($learnMGTUIP) && ($clientIP == $learnMGTUIP) )
+   {
+    $usersConfig->set('allowUserRegistration', 1); // enable user registration
+    $usersConfig->set('useractivation', 0); // set type activation - auto
+    $usersConfig->set('mail_to_admin', 1); // enable send email to admin
+    return;
+   }
+
+   // enable user registration for trust ip
    $trustip = trim($this->params->get('trustip', ''));
    if ( !empty($trustip) )
    {
     foreach(explode("\n", $trustip) as $CIDR)
-     if ( $this->ipCIDRCheck($_SERVER['REMOTE_ADDR'], $CIDR) ) return;
-
-    $usersConfig->set('allowUserRegistration', 0);
+    {
+     if ( $this->ipCIDRCheck($clientIP, $CIDR) )
+     {
+      $usersConfig->set('allowUserRegistration', 1); // enable user registration
+      $usersConfig->set('useractivation', 1); // set type activation - user
+      $usersConfig->set('mail_to_admin', 0); // disable send email to admin
+      return;
+     }
+    }
    }
   }
  }

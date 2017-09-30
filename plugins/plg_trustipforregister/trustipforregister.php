@@ -21,7 +21,7 @@ class PlgSystemTrustipforregister extends JPlugin
  public function onAfterInitialise()
  {
   $application = JFactory::getApplication();
-  if ($application->isClient('administrator')) return;
+  if ( $application->isAdmin() ) return;
 
   $usersConfig = JComponentHelper::getParams('com_users');
   if ( !$usersConfig->get('allowUserRegistration')  )
@@ -35,6 +35,49 @@ class PlgSystemTrustipforregister extends JPlugin
     $usersConfig->set('allowUserRegistration', 1); // enable user registration
     $usersConfig->set('useractivation', 0); // set type activation - auto
     $usersConfig->set('mail_to_admin', 1); // enable send email to admin
+
+
+    $user = @$_REQUEST['learnmgtu-createuser'];
+    if ( !empty($user) && is_array($user) )
+    {
+echo "<pre>";
+print_r($user);
+
+
+//    $lang = JFactory::getLanguage();
+//    $extension = 'com_users';
+//    $base_dir = JPATH_SITE;
+//    $language_tag = 'en-GB';
+//    $reload = true;
+//    $lang->load($extension, $base_dir, $language_tag, $reload);
+
+    // load the user regestration model
+    $model = self::getModel('registration', JPATH_ROOT. '/components/com_users', 'Users');
+    // set password
+    $password = self::randomkey(8);
+    // linup new user data
+    $data = array(
+        'username' => $new['username'],
+        'name' => $new['name'],
+        'email1' => $new['email'],
+        'password1' => $password, // First password field
+        'password2' => $password, // Confirm password field
+        'block' => 0 );
+    // register the new user
+    $userId = $model->register($data);
+    // if user is created
+    if ($userId > 0)
+    {
+        return $userId;
+    }
+    return $model->getError();
+
+die();
+    }
+
+
+
+
     return;
    }
 

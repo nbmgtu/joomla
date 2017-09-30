@@ -33,7 +33,7 @@ class PlgSystemStrip extends JPlugin
  public function onBeforeCompileHead()
  {
   $application = JFactory::getApplication();
-  if ($application->isClient('administrator')) return;
+  if ( $application->isAdmin() ) return;
 
   $document = JFactory::getDocument();
   $document->_generator = 'nbmgtu';
